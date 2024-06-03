@@ -1,0 +1,20 @@
+{
+  "name": "prisma-softdelete",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "infra": "docker-compose -p prisma-test -f docker-compose.yml up -d",
+    "push": "dotenv -e .env.dev -- prisma db push",
+    "go": "dotenv -e .env.dev -- node --loader ts-node/esm src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "@types/node": "^20.14.0",
+    "dotenv-cli": "^7.4.2",
+    "prisma": "^5.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

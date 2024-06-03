@@ -1,0 +1,10 @@
+version: "3"
+services:
+  postgresql:
+    image: "postgres:14.6"
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: prisma_test
+    ports:
+      - "48432:5432"
